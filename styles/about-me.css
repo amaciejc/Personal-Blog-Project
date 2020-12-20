@@ -1,6 +1,22 @@
 .page-section-wrapper{
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border: 1px solid white;
+    background-color: white;
+    grid-area: main;
+    border-radius: 2px;
+    padding: 10px;
 }
-.profile{
-    width: 10%;
+
+.footer-about-us{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 2%;
+    background-color: white;
 }
+
+.about-me-text{
+    text-align: justify;
+}
+
