@@ -1,0 +1,75 @@
+.wrapper-post {
+    display: grid;
+    background-color: #ebebeb;
+    border-radius: 2%;
+    /* border: solid 3px red; */
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "reco reco"
+    "footer footer"
+}
+
+.article-post{
+    grid-area: main;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.article-post .h2-article {
+   margin: 10px;
+   text-align: center;
+}
+
+.recommended-articles{
+    grid-area: reco;
+    display: flex;
+    justify-content: space-around;
+}
+
+.one,
+.two{
+    border: 1px solid white;
+    margin: 5px;
+    display: flex;
+    flex-flow: column;
+    padding: 1%;
+    width: 50%;
+}
+
+.one a,
+.two a{
+    text-decoration: none;
+    text-align: center;
+    color: navy;
+}
+
+.one a:hover,
+.two a:hover{
+    color:blue;
+}
+
+.one h2,
+.two h2{
+    margin:0px;
+}
+
+.author-date{
+    font-style: italic;
+    margin: 5px;
+    text-align: center;
+}
+
+.post-img{
+    width: 100%;
+}
+
+.reco-img{
+    width: 100%;
+    Height: 150px;
+}

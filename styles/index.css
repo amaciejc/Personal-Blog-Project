@@ -1,0 +1,228 @@
+
+body{
+    max-width: 1100px;
+    margin: 10px auto;
+
+}
+.wrapper {
+    display: grid;
+    background-color: #ebebeb;
+    border-radius: 2%;
+    /* border: solid 3px red; */
+    grid-template-columns: 65% 35%;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main side"
+    "footer footer"
+}
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    margin: 10px;
+}
+
+.logo{
+    height: 3rem;
+    margin-right: 25px;
+}
+
+.h1-header {
+    margin: 0rem;
+    font-size: 2rem;
+}
+/* NAVIGATION */
+.navigation {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    background-color: gainsboro;
+    border-radius: 7px;
+    padding: 0 15px;
+}
+
+.nav-item{
+    margin: 5px 10px;
+}
+
+nav a[href],
+nav a[href]:visited{
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+nav a[href]:hover{
+    text-decoration: none;
+    /* background: white; */
+    color: blue;
+}
+
+a[href*="https"]:hover{
+    background: none;
+}
+
+.search-box{
+    margin-left: 100px;
+    margin-right: 0px;
+    height: 2em;
+    width: 250px;
+    font-size: 1em;
+}
+
+.search-button{
+    height:2em;
+    height:2em;
+    font-size: 1em;
+}
+
+.linkedin{
+    margin-left: auto;
+    margin-right: 0px;
+    height: 1.6em;
+/* the margin-left: auto makes the LinkedIn item in navigation be positioned to the right */
+}
+
+/* MAIN ARTICLE */
+.main-article {
+    grid-area: main;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 2%;
+}
+
+.main-article-title{
+    grid-area: title;
+    text-decoration: none;
+    color: navy;
+}
+
+.main-article-title:hover{
+    color: blue;
+}
+
+.main-article-title h1{
+    margin: 0px;
+    text-align: center;
+}
+
+.main-article .author-date{
+    padding: 3px;
+    margin: 10px 0px;
+    font-style: italic;
+}
+
+.main-article .author{
+    margin-left: 20px;
+}
+
+.main-article-img{
+    width: 100%;
+}
+
+.main-article-text{
+    grid-area: text;
+    font-size: 1em;
+}
+
+.article-teaser {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    grid-area: footer;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 2%;
+}
+
+.aside{
+    display: flex;
+    flex-flow: column;
+    grid-area: side;
+}
+
+.article-teaser-one, 
+.article-teaser-two{
+    border: 2px solid white;
+    padding: 10px;
+    margin: 0 5px 5px;
+    border-radius: 2%;
+}
+
+.article-teaser .date-published,
+.article-teaser .author{
+    font-style: italic;
+}
+
+.article-teaser a{
+    text-decoration: none;
+    color: navy;
+    text-align: center;
+}
+
+.article-teaser a:hover{
+    color:blue;
+}
+
+.article-teaser h2{
+    margin: 0px;
+}
+
+.article-teaser img{
+    height: 100px;
+    margin: 5px 5px;
+}
+
+.teaser-article-text{
+    margin: 2px;
+}
+
+.see-more{
+    text-align: center;
+    border: 1px solid white;
+    background-color: gainsboro;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.all{
+    text-decoration: none;
+}
+
+@media(max-width: 600px) {
+.wrapper {
+    display: grid;
+    background-color: #ebebeb;
+    border-radius: 2%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "side"
+    "footer"
+    }
+
+.h1-header,
+.search-box,
+.search-button
+{
+    display: none;
+    }
+}
+
+.newsletter{
+    text-align: center;
+}
